@@ -134,7 +134,7 @@ public class Main {
                 case 16:
                     System.out.println("Введите длину массива: ");
                     int arr_len = scanner.nextInt();
-               `     int[] arr = new int[arr_len];
+                    int[] arr = new int[arr_len];
 
                     System.out.println("Вводите числа по одному: ");
                     for (int i = 0; i < arr_len; i++){
