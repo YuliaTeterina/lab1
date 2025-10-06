@@ -48,7 +48,7 @@ public class Solution {
     }
 
     public boolean is35(int x) {
-        if ((x % 3) * (x % 5) == 0) {
+        if (((x % 3) == 0) ^ ((x % 5) == 0)) {
             return true;
         } else {
             return false;
