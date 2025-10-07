@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class InputValidator {
-    public static double getValidDouble(Scanner scanner, String message) {
+
+    public double getValidDouble(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
             if (scanner.hasNextDouble()) {
@@ -13,7 +14,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidInt(Scanner scanner, String message) {
+    public int getValidInt(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
             if (scanner.hasNextInt()) {
@@ -25,7 +26,7 @@ public class InputValidator {
         }
     }
 
-    public static long getValidLong(Scanner scanner, String message) {
+    public long getValidLong(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
             if (scanner.hasNextLong()) {
@@ -37,7 +38,7 @@ public class InputValidator {
         }
     }
 
-    public static char getValidDigitChar(Scanner scanner, String message) {
+    public char getValidDigitChar(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
             String input = scanner.next();
@@ -49,7 +50,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidPositiveInt(Scanner scanner, String message) {
+    public int getValidPositiveInt(Scanner scanner, String message) {
         while (true) {
             int value = getValidInt(scanner, message);
             if (value > 0) {
@@ -60,7 +61,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidNonNegativeInt(Scanner scanner, String message) {
+    public int getValidNonNegativeInt(Scanner scanner, String message) {
         while (true) {
             int value = getValidInt(scanner, message);
             if (value >= 0) {
@@ -71,7 +72,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidDayOfWeek(Scanner scanner, String message) {
+    public int getValidDayOfWeek(Scanner scanner, String message) {
         while (true) {
             int value = getValidInt(scanner, message);
             if (value >= 1 && value <= 7) {
@@ -82,7 +83,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidArrayLength(Scanner scanner, String message) {
+    public int getValidArrayLength(Scanner scanner, String message) {
         while (true) {
             int value = getValidInt(scanner, message);
             if (value >= 0) {
@@ -93,7 +94,7 @@ public class InputValidator {
         }
     }
 
-    public static int getValidInsertPosition(Scanner scanner, String message, int arrayLength) {
+    public int getValidInsertPosition(Scanner scanner, String message, int arrayLength) {
         while (true) {
             int value = getValidInt(scanner, message);
             if (value >= 0 && value <= arrayLength) {
@@ -104,7 +105,7 @@ public class InputValidator {
         }
     }
 
-    public static int[] getValidIntArray(Scanner scanner, int length, String message) {
+    public int[] getValidIntArray(Scanner scanner, int length, String message) {
         int[] array = new int[length];
         System.out.println(message);
         for (int i = 0; i < length; i++) {
@@ -113,7 +114,7 @@ public class InputValidator {
         return array;
     }
 
-    public static int getValidChoice(Scanner scanner) {
+    public int getValidChoice(Scanner scanner) {
         while (true) {
             System.out.print("Введите номер задачи (1-20) или 0 для выхода: ");
             if (scanner.hasNextInt()) {
